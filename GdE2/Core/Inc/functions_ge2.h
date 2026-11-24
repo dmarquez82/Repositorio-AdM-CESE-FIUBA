@@ -15,13 +15,13 @@ static const int32_t GPS_data[LONGITUD_EJ1] = {
     0x00000000, // Lat = 0    | Long = 0
     0x0000A00A, // Lat = 10   | Long = 10
     0x00064064, // Lat = 100  | Long = 100
-    0x003E80C8, // Lat = 200  | Long = 1000
+    0x003E80C8, // Lat = 1000 | Long = 200
     0x007D07D0, // Lat = 2000 | Long = 2000
     0x00800800, // Lat = -2048| Long = -2048
-    0x00FFF001, // Lat = 1    | Long = -1
-    0x00001FFF, // Lat = -1   | Long = 1
-    0x00FC0040, // Lat = 64   | Long = -64
-    0x00123C98  // Lat = -872 | Long = 291
+    0x00FFF001, // Lat = -1   | Long = 1
+    0x00001FFF, // Lat = 1    | Long = -1
+    0x00FC0040, // Lat = -64  | Long = 64
+    0x00123C98  // Lat = 291  | Long = -872
 };
 
 // ============================================================================
