@@ -26,7 +26,7 @@
 // Valor de retorno: void
 .thumb_func
 	asm_GPS_unpack:
-		push {r4 - r7}           // Se resguardan los valores de los registros en el stack
+		push {r4 - r6}          // Se resguardan en el stack solo los registros que se usan (r4 a r6)
 
 		// Guarda de seguridad
 		cbz r0, _exit1           // Salir si GPS_data es una dirección nula
@@ -46,7 +46,7 @@
 		b _loop1                 // De lo contrario seguimos iterando
 
 	_exit1:
-		pop {r4 - r7}            // Se recuperan los valores de los registros
+		pop {r4 - r6}           // Se recuperan los valores de los registros
 		bx lr
 
 /* Ejercicio 2 */
@@ -65,7 +65,7 @@
 // Valor de retorno: índice del valor máximo (0 si no hay muestras)
 .thumb_func
 	asm_max:
-		push {r4 - r7}           // Se resguardan los valores de los registros en el stack
+		push {r4}               // Se resguardan en el stack solo los registros que se usan (r4)
 		mov r2, #0               // Índice por defecto = 0
 
 		// Guarda de seguridad
@@ -90,7 +90,7 @@
 
 	_fin2:
 		mov r0, r2               // Se devuelve el índice en r0
-		pop {r4 - r7}            // Se recuperan los valores de los registros
+		pop {r4}                // Se recuperan los valores de los registros
 		bx lr
 
 /* Ejercicio 3 */
@@ -110,7 +110,7 @@
 // Valor de retorno: void
 .thumb_func
 	asm_invertir:
-		push {r4 - r7}           // Se resguardan los valores de los registros en el stack
+		push {r4, r5}           // Se resguardan en el stack solo los registros que se usan (r4 y r5)
 
 		// Guarda de seguridad
 		cbz r0, _exit3           // Salir si buffer es una dirección nula
@@ -131,5 +131,5 @@
 		blo _loop3               // (si son iguales, es el elemento central de un vector impar)
 
 	_exit3:
-		pop {r4 - r7}            // Se recuperan los valores de los registros
+		pop {r4, r5}            // Se recuperan los valores de los registros
 		bx lr
