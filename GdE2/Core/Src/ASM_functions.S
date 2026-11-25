@@ -84,7 +84,7 @@
 		itt ge                   // Elemento >= máximo? (comparación CON signo)
 		  movge r3, r4           // Si es verdad: se actualiza el valor máximo
 		  movge r2, r1           // Si es verdad: se actualiza el índice del máximo
-		// Se usa >= porque se recorre de atrás hacia adelante: ante empate
+		// Se usa >= porque se recorre de atrás hacia adelante: ante igualdad
 		// queda el primer índice, igual que en la versión en C
 		b _loop2                 // Se sigue iterando
 

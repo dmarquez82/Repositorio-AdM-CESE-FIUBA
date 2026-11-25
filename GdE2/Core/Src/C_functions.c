@@ -35,7 +35,7 @@ uint32_t max(int32_t *vectorIn, uint32_t longitud){
     if (longitud > 0){
         valorMax = vectorIn[0];
         for (uint32_t i = 1; i < longitud; i ++){
-            if (vectorIn[i] > valorMax){        // Mayor estricto: ante empate queda el primer índice
+            if (vectorIn[i] > valorMax){        // Mayor estricto: ante igualdad queda el primer índice
                 valorMax = vectorIn[i];
                 indiceMax = i;
             }
